@@ -6,7 +6,7 @@ class CanvasGuess extends PureComponent {
     
 
     render() {
-        
+        console.log('props en state:', this.props, this.state, this.refs)
         return (
             <CanvasDraw style={{ display: 'flex', border:'1px solid' ,margin: '0 auto' }} 
                         immediateLoading={true}

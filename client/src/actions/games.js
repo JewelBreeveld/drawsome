@@ -71,7 +71,7 @@ export const createGame = () => (dispatch, getState) => {
 }
 
 export const updateGame = (gameId, drawing) => (dispatch, getState) => {
-  console.log('game id',gameId)
+  console.log('game id!!!!!!!!!!!!!!',gameId)
   const state = getState()
   const jwt = state.currentUser.jwt
 
