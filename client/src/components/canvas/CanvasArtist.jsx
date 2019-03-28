@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react'
 import CanvasDraw from 'react-canvas-draw'
-import { SwatchesPicker } from 'react-color'
+import { GithubPicker } from 'react-color'
 import { connect } from 'react-redux'
 import { updateGame } from '../../actions/games'
 import Scoreboard from '../scoreboard/Scoreboard';
+import Button from '@material-ui/core/Button'
+
 
 class CanvasArtist extends PureComponent {
 
@@ -73,20 +75,22 @@ class CanvasArtist extends PureComponent {
                 </div>   
 
                 <div>
-                <SwatchesPicker onChangeComplete={this.handleChangeColor}
+                <GithubPicker onChangeComplete={this.handleChangeColor}
                                 style={{    display: 'flex', 
                                             border:'1px solid' ,
                                             margin: '0 auto',
                                             height: 300,
                                             width: 500
                                             }} />    
-                <button onClick={() => { this.saveableCanvas.clear() }} >
+                <Button color="primary" className="clear-canvas" size="small"
+        variant="contained" onClick={() => { this.saveableCanvas.clear() }} >
                     Clear
-                </button>
-                <button
+                </Button>
+                <Button color="primary" className="undo-move" size="small"
+        variant="contained"
                         onClick={() => { this.saveableCanvas.undo() }} >
                     Undo
-                </button>
+                </Button>
                 </div>
 
                 <div>
@@ -108,3 +112,4 @@ const mapDispatchToProps ={
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CanvasArtist)
+

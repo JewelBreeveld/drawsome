@@ -1,5 +1,3 @@
-import { connect } from "net";
-
 const words = [
     "cat", "ghost", "cow", "bug", "snake", 
     "lips", "socks", "coat", "heart", "kite", "milk", 

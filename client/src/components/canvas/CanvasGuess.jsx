@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react'
 import CanvasDraw from 'react-canvas-draw'
 import { connect } from 'react-redux'
 
+
 class CanvasGuess extends PureComponent {
     
 
