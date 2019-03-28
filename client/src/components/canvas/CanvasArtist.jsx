@@ -29,7 +29,7 @@ class CanvasArtist extends PureComponent {
     updateDrawing = () => {
         console.log('props update drawing', this.props)
         console.log('state update drawing', this.state)
-        const { updateGame } = this.props //games,
+        const { updateGame } = this.props //games
         localStorage.setItem(
             "savedDrawing", this.saveableCanvas.getSaveData()
         )
